@@ -1,15 +1,13 @@
-/*
-
-COLOR PALETTE
-
-WHITE: #FEFEFE
-BLACK: #000000
-TEXT INPUT BACKGROUND: #EEEEEE
-ADD BUTTON: #FFCC68
-DELETE BUTTON: #FF9548
-CHORE: #FBDF7C
-
-*/
+:root {
+    --white: #fefefe;
+    --black: #000000;
+    --input-bg: #eeeeee;
+    --add-btn-bg: #ffcc68;
+    --add-btn-bg-hover: #fabc50;
+    --delete-btn-bg: #ff9548;
+    --delete-btn-bg-hover: #e97c30;
+    --chore-bg: #fbdf7c;
+}
 
 html, body {
     margin: 0;
@@ -26,9 +24,10 @@ button {
     font-family: "Inter", sans-serif;
     width: 50px;
     border: none;
-    border-radius: 10px;
     font-size: 18px;
     font-weight: 200;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 .container {
@@ -49,20 +48,31 @@ button {
 }
 
 input {
-    background-color: #eeeeee;
+    background-color: var(--input-bg);
     border: none;
-    border-radius: 10px;
     font-size: 18px;
     text-align: center;
     color: #a4a4a4;
 }
 
+input:focus {
+    outline: 2px solid var(--add-btn-bg);
+}
+
 #btn-add {
-    background-color: #ffcc68;
+    background-color: var(--add-btn-bg);
 }
 
 #btn-delete {
-    background-color: #ff9548;
+    background-color: var(--delete-btn-bg);
+}
+
+#btn-add:hover {
+    background-color: var(--add-btn-bg-hover);
+}
+
+#btn-delete:hover {
+    background-color: var(--delete-btn-bg-hover);
 }
 
 #controls {
@@ -82,16 +92,30 @@ input {
 .chore {
     width: 100%;
     height: 50px;
-    background-color: #FBDF7C;
-    border-radius: 10px;
+    background-color: var(--chore-bg);
+    font-family: "Inter", sans-serif;
+}
 
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        height: auto;
+    }
+    .chore {
+        font-size: 16px;
+    }
+    button {
+        width: auto;
+        padding: 0 10px;
+    }
+}
+
+.rounded {
+    border-radius: 10px;
+}
+
+.flex-center {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
-.chore p {
-    font-size: 18px;
-    font-family: "Inter", sans-serif;
-}
-

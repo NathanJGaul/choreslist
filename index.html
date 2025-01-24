@@ -15,18 +15,31 @@
     <body>
         <div class="container">
             <h1>Choreslist</h1>
-            <div id="content">
+            <section id="content">
                 <div id="controls">
-                    <input type="text" placeholder="Do dishes">
-                    <button id="btn-add">-></button>
-                    <button id="btn-delete">X</button>
+                    <input
+                        type="text"
+                        class="rounded"
+                        placeholder="Enter a chore..."
+                        aria-label="Enter a new chore"
+                    >
+                    <button id="btn-add" class="rounded" aria-label="Add chore">
+                        ->
+                    </button>
+                    <button
+                        id="btn-delete"
+                        class="rounded"
+                        aria-label="Delete chore"
+                    >
+                        X
+                    </button>
                 </div>
-                <div id="chores">
-                    <div class="chore"><p>Do dishes</p></div>
-                    <div class="chore"><p>Clean kitchen</p></div>
-                    <div class="chore"><p>Do laundry</p></div>
-                </div>
-            </div>
+                <section id="chores">
+                    <div class="chore rounded flex-center">Do dishes</div>
+                    <div class="chore rounded flex-center">Clean kitchen</div>
+                    <div class="chore rounded flex-center">Do laundry</div>
+                </section>
+            </section>
         </div>
         <script src="index.js"></script>
     </body>
