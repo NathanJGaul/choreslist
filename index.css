@@ -188,7 +188,7 @@ button:focus {
 }
 
 /* Media Queries */
-@media (max-width: var(--mobile-breakpoint)) {
+@media (max-width: 768px) {
     .container {
         width: var(--container-width-mobile);
     }
@@ -199,7 +199,38 @@ button:focus {
     
     button {
         width: auto;
-        padding: 0 10px;
+        min-width: 44px; /* Minimum touch target size */
+        min-height: 44px;
+        padding: 0 15px;
+    }
+
+    input {
+        min-height: 44px;
+        font-size: 16px; /* Prevent zoom on iOS */
+    }
+
+    .container {
+        margin: max(env(safe-area-inset-top), var(--spacing-sm)) auto;
+        padding: 0 max(env(safe-area-inset-right), var(--spacing-xs))
+                 0 max(env(safe-area-inset-left), var(--spacing-xs));
+        padding-bottom: max(env(safe-area-inset-bottom), var(--spacing-sm));
+    }
+
+    .chore {
+        min-height: 44px;
+        height: auto;
+        padding: 10px var(--spacing-xs);
+        display: flex;
+        align-items: center;
+    }
+
+    h1 {
+        font-size: 36px;
+        margin-bottom: var(--spacing-xs);
+    }
+
+    #controls {
+        height: auto;
     }
 }
 

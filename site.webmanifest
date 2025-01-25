@@ -1,6 +1,8 @@
 {
-    "name": "Chorelist",
-    "short_name": "Chorelist",
+    "name": "Choreslist",
+    "short_name": "Choreslist",
+    "start_url": "/",
+    "scope": "/",
     "icons": [
         {
             "src": "/android-chrome-192x192.png",
@@ -15,5 +17,7 @@
     ],
     "theme_color": "#ffffff",
     "background_color": "#ffffff",
-    "display": "standalone"
+    "display": "standalone",
+    "orientation": "portrait",
+    "categories": ["productivity", "utilities"]
 }
